@@ -779,7 +779,7 @@ Para detener el Dashboard, ejecuta la última celda de código y sigue las instr
 !mv cloudflared-linux-amd64 /usr/local/bin/cloudflared
 
 #Ejecutar Streamlit
-!streamlit run 0_👋_Bienvenida.py &>/content/logs.txt & #Cambiar 0_👋_Hello.py por el nombre de tu archivo principal
+#!streamlit run 0_👋_Bienvenida.py &>/content/logs.txt & #Cambiar 0_👋_Hello.py por el nombre de tu archivo principal
 
 #Exponer el puerto 8501 con Cloudflare Tunnel
 !cloudflared tunnel --url http://localhost:8501 > /content/cloudflared.log 2>&1 &
