@@ -792,7 +792,7 @@ import re
 found_context = False  # Indicador para saber si estamos en la sección correcta
 
 #with open('/content/cloudflared.log') as f:
-    for line in f:
+    #for line in f:
         #Detecta el inicio del contexto que nos interesa
         if "Your quick Tunnel has been created" in line:
             found_context = True
