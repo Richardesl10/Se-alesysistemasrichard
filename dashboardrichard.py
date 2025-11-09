@@ -762,7 +762,7 @@ cada pagina se enviara al directorio /pages
 #             except Exception as e:
 #                 st.error(f"Ocurrió un error inesperado durante el proceso de predicción: {e}")
 
-!mv 3_Detector_de_Genero_Musical_🎶.py pages/
+#!mv 3_Detector_de_Genero_Musical_🎶.py pages/
 
 """## **Inicio del Dashboard con túnel local**
 
