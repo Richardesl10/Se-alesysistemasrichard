@@ -799,7 +799,7 @@ found_context = False  # Indicador para saber si estamos en la sección correcta
 
         #Busca una URL si ya se encontró el contexto relevante
        #if found_context:
-            match = re.search(r'https?://\S+', line)
+           # match = re.search(r'https?://\S+', line)
             #if match:
                # url = match.group(0)  #Extrae la URL encontrada
                 #print(f'Tu aplicación está disponible en: {url}')
