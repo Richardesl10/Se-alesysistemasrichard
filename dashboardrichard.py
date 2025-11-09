@@ -18,7 +18,7 @@ Original file is located at
 
 """#Crear carpeta pages para trabajar Multiapp en Streamlit"""
 
-!mkdir pages
+#!mkdir pages
 
 """# Página principal"""
 
