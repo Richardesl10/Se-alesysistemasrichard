@@ -782,7 +782,7 @@ Para detener el Dashboard, ejecuta la última celda de código y sigue las instr
 #!streamlit run 0_👋_Bienvenida.py &>/content/logs.txt & #Cambiar 0_👋_Hello.py por el nombre de tu archivo principal
 
 #Exponer el puerto 8501 con Cloudflare Tunnel
-!cloudflared tunnel --url http://localhost:8501 > /content/cloudflared.log 2>&1 &
+#!cloudflared tunnel --url http://localhost:8501 > /content/cloudflared.log 2>&1 &
 
 #Leer la URL pública generada por Cloudflare
 import time
