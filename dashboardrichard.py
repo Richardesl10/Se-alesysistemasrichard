@@ -774,9 +774,9 @@ cada pagina se enviara al directorio /pages
 Para detener el Dashboard, ejecuta la última celda de código y sigue las instrucciones mostradas.
 """
 
-!wget https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64
+#!wget https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64
 !chmod +x cloudflared-linux-amd64
-!mv cloudflared-linux-amd64 /usr/local/bin/cloudflared
+#!mv cloudflared-linux-amd64 /usr/local/bin/cloudflared
 
 #Ejecutar Streamlit
 #!streamlit run 0_👋_Bienvenida.py &>/content/logs.txt & #Cambiar 0_👋_Hello.py por el nombre de tu archivo principal
