@@ -12,7 +12,7 @@ Original file is located at
 """
 
 #instalación de librerías
-!pip install streamlit -q
+#!pip install streamlit -q
 
 pip install streamlit yt-dlp soundfile numpy pandas scikit-learn matplotlib joblib
 
