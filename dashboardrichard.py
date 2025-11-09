@@ -12,13 +12,13 @@ Original file is located at
 """
 
 #instalación de librerías
-#!pip install streamlit -q
+!pip install streamlit -q
 
-#pip install streamlit yt-dlp soundfile numpy pandas scikit-learn matplotlib joblib
+pip install streamlit yt-dlp soundfile numpy pandas scikit-learn matplotlib joblib
 
 """#Crear carpeta pages para trabajar Multiapp en Streamlit"""
 
-#!mkdir pages
+!mkdir pages
 
 """# Página principal"""
 
@@ -762,7 +762,7 @@ cada pagina se enviara al directorio /pages
 #             except Exception as e:
 #                 st.error(f"Ocurrió un error inesperado durante el proceso de predicción: {e}")
 
-#!mv 3_Detector_de_Genero_Musical_🎶.py pages/
+!mv 3_Detector_de_Genero_Musical_🎶.py pages/
 
 """## **Inicio del Dashboard con túnel local**
 
@@ -774,15 +774,15 @@ cada pagina se enviara al directorio /pages
 Para detener el Dashboard, ejecuta la última celda de código y sigue las instrucciones mostradas.
 """
 
-#!wget https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64
-#!chmod +x cloudflared-linux-amd64
-#!mv cloudflared-linux-amd64 /usr/local/bin/cloudflared
+!wget https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64
+!chmod +x cloudflared-linux-amd64
+!mv cloudflared-linux-amd64 /usr/local/bin/cloudflared
 
 #Ejecutar Streamlit
-#!streamlit run 0_👋_Bienvenida.py &>/content/logs.txt & #Cambiar 0_👋_Hello.py por el nombre de tu archivo principal
+!streamlit run 0_👋_Bienvenida.py &>/content/logs.txt & #Cambiar 0_👋_Hello.py por el nombre de tu archivo principal
 
 #Exponer el puerto 8501 con Cloudflare Tunnel
-#!cloudflared tunnel --url http://localhost:8501 > /content/cloudflared.log 2>&1 &
+!cloudflared tunnel --url http://localhost:8501 > /content/cloudflared.log 2>&1 &
 
 #Leer la URL pública generada por Cloudflare
 import time
@@ -791,19 +791,19 @@ time.sleep(5)  # Esperar que se genere la URL
 import re
 found_context = False  # Indicador para saber si estamos en la sección correcta
 
-#with open('/content/cloudflared.log') as f:
-    #for line in f:
+with open('/content/cloudflared.log') as f:
+    for line in f:
         #Detecta el inicio del contexto que nos interesa
-        #if "Your quick Tunnel has been created" in line:
-            #found_context = True
+        if "Your quick Tunnel has been created" in line:
+            found_context = True
 
         #Busca una URL si ya se encontró el contexto relevante
-       #if found_context:
-           # match = re.search(r'https?://\S+', line)
-            #if match:
-               # url = match.group(0)  #Extrae la URL encontrada
-                #print(f'Tu aplicación está disponible en: {url}')
-                #break  #Termina el bucle después de encontrar la URL
+        if found_context:
+            match = re.search(r'https?://\S+', line)
+            if match:
+                url = match.group(0)  #Extrae la URL encontrada
+                print(f'Tu aplicación está disponible en: {url}')
+                break  #Termina el bucle después de encontrar la URL
 
 """##Final del Proceso de ejecución del Dashboard"""
 
