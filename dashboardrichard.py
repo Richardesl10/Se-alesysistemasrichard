@@ -794,16 +794,16 @@ found_context = False  # Indicador para saber si estamos en la sección correcta
 #with open('/content/cloudflared.log') as f:
     #for line in f:
         #Detecta el inicio del contexto que nos interesa
-        if "Your quick Tunnel has been created" in line:
+        #if "Your quick Tunnel has been created" in line:
             found_context = True
 
         #Busca una URL si ya se encontró el contexto relevante
-        if found_context:
+       #if found_context:
             match = re.search(r'https?://\S+', line)
-            if match:
-                url = match.group(0)  #Extrae la URL encontrada
-                print(f'Tu aplicación está disponible en: {url}')
-                break  #Termina el bucle después de encontrar la URL
+            #if match:
+               # url = match.group(0)  #Extrae la URL encontrada
+                #print(f'Tu aplicación está disponible en: {url}')
+                #break  #Termina el bucle después de encontrar la URL
 
 """##Final del Proceso de ejecución del Dashboard"""
 
